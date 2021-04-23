@@ -116,4 +116,9 @@ public class BrowserClient extends WebViewClient {
             return matcher.lookingAt();
         }
     }
+
+    @Override
+    public void onReceivedSslError(WebView view, SslErrorHandler handler, SslError error) {
+        handler.proceed();
+    }
 }
