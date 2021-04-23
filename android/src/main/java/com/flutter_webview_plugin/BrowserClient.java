@@ -7,6 +7,9 @@ import android.webkit.WebResourceRequest;
 import android.webkit.WebResourceResponse;
 import android.webkit.WebView;
 import android.webkit.WebViewClient;
+import android.webkit.SslErrorHandler;
+
+import android.net.http.SslError;
 
 import java.util.HashMap;
 import java.util.Map;
