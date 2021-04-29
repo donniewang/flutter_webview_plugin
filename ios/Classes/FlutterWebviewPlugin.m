@@ -199,7 +199,7 @@ static NSString *const CHANNEL_NAME = @"flutter_webview_plugin";
                 NSURL *htmlUrl = [NSURL fileURLWithPath:url isDirectory:false];
                 NSString *localUrlScope = call.arguments[@"localUrlScope"];
                 if (@available(iOS 9.0, *)) {
-                    if(localUrlScope == nil) {
+                    if(localUrlScope == nil || localUrlScope == [NSNull null]) {
                         [self.webview loadFileURL:htmlUrl allowingReadAccessToURL:htmlUrl];
                     }
                     else {
